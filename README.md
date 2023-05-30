@@ -31,21 +31,21 @@ VCCから任意のプロジェクトを選択し、「Manage Project」から「
 
 3. Inspector上で設定を行います。
    
-   - Layout Size X
+   - Layout Size X  
      コライダーを配置する範囲（Xサイズ）。
-   - Layout Size Z
+   - Layout Size Z  
      コライダーを配置する範囲（Zサイズ）。
-   - Layout Count
+   - Layout Count  
      コライダーを配置する数。
-   - Collider Thickness
+   - Collider Thickness  
      コライダーの厚み。
-   - Collider Height
+   - Collider Height  
      コライダーの高さ。
-   - Collider Edge Length
-     コライダーの辺の長さ。
+   - Collider Edge Length  
+     コライダーの辺の長さ。  
      0を指定すると自動で計算します。
-   - Collider Name Format
-     コライダーの名前の書式。
+   - Collider Name Format  
+     コライダーの名前の書式。  
      生成時に `{0}` が連番に置換されます。
 
 4. Inspector上で `ColliderGenerator` の `Generate` ボタンを押下することで `BoxCollider` が生成されます。
