@@ -58,3 +58,5 @@ VCCから任意のプロジェクトを選択し、「Manage Project」から「
 ![image](https://github.com/tp-jp/collider-generator/assets/130125691/fbbebae1-bec1-4e54-98ea-fdc127412f4c)
 ![image](https://github.com/tp-jp/collider-generator/assets/130125691/9685ccc6-9ee5-45a5-ac4f-236e70f34ab5)
 
+## 更新履歴
+[CHANGELOG](CHANGELOG.md)
