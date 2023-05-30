@@ -1,0 +1,17 @@
+{
+    "name": "com.tp.jp.collider-generator.Editor",
+    "references": [
+        "com.tp.jp.collider-generator"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

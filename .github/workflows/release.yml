@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   push:
     branches: main
-    paths: Packages/com.vrchat.demo-template/**
+    paths: Packages/com.tp.jp.collider-generator/**
 
 env:
-  packageName: "com.vrchat.demo-template"
+  packageName: "com.tp.jp.collider-generator"
 
 permissions:
   contents: write
@@ -56,3 +56,14 @@ jobs:
             ${{ env.zipFile }}
             ${{ env.unityPackage }}
             Packages/${{ env.packageName }}/package.json
+
+      - name: Call Workflow
+        run: |
+          TOKEN=${{ secrets.VPM_REPOS_PAT }}
+
+          curl \
+            -X POST \
+            -H "Authorization: token $TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/tp-jp/vpm-repos/dispatches \
+            -d '{"event_type":"on-demand-build"}'
