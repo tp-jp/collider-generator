@@ -1,50 +1,51 @@
 # ColliderGenerator
 
-ƒRƒ‰ƒCƒ_[‚ğw’è‚µ‚½”ÍˆÍ‚É”z’u‚Å‚«‚é•Ö—˜ƒc[ƒ‹‚Å‚·B
-VRChat‚Ìƒ[ƒ‹ƒhì¬‚È‚Ç‚É‚²—˜—p‚­‚¾‚³‚¢B
+ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ã‚’æŒ‡å®šã—ãŸç¯„å›²ã«é…ç½®ã§ãã‚‹ä¾¿åˆ©ãƒ„ãƒ¼ãƒ«ã§ã™ã€‚
+VRChatã®ãƒ¯ãƒ¼ãƒ«ãƒ‰ä½œæˆæ™‚ãªã©ã«ã”åˆ©ç”¨ãã ã•ã„ã€‚
 
-## “±“ü•û–@
+## å°å…¥æ–¹æ³•
 
-VCC‚ğƒCƒ“ƒXƒg[ƒ‹Ï‚İ‚Ìê‡AˆÈ‰º‚Ì**‚Ç‚¿‚ç‚©ˆê‚Â**‚Ìè‡‚ğs‚¤‚±‚Æ‚ÅƒCƒ“ƒ|[ƒg‚Å‚«‚Ü‚·B
+VCCã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ¸ˆã¿ã®å ´åˆã€ä»¥ä¸‹ã®**ã©ã¡ã‚‰ã‹ä¸€ã¤**ã®æ‰‹é †ã‚’è¡Œã†ã“ã¨ã§ã‚¤ãƒ³ãƒãƒ¼ãƒˆã§ãã¾ã™ã€‚
 
-- [VCC Listing](https://tp-jp.github.io/vpm-repos/) ‚ÖƒAƒNƒZƒX‚µAuAdd to VCCv‚ğƒNƒŠƒbƒN
+- [VCC Listing](https://tp-jp.github.io/vpm-repos/) ã¸ã‚¢ã‚¯ã‚»ã‚¹ã—ã€ã€ŒAdd to VCCã€ã‚’ã‚¯ãƒªãƒƒã‚¯
 
-- VCC‚ÌƒEƒBƒ“ƒhƒE‚Å `Setting - Packages - Add Repository` ‚Ì‡‚ÉŠJ‚«A `https://tp-jp.github.io/vpm-repos/index.json` ‚ğ’Ç‰Á
+- VCCã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã§ `Setting - Packages - Add Repository` ã®é †ã«é–‹ãã€ `https://tp-jp.github.io/vpm-repos/index.json` ã‚’è¿½åŠ 
 
-[VPM CLI](https://vcc.docs.vrchat.com/vpm/cli/) ‚ğg—p‚µ‚ÄƒCƒ“ƒXƒg[ƒ‹‚·‚éê‡AƒRƒ}ƒ“ƒhƒ‰ƒCƒ“‚ğŠJ‚«ˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B
+[VPM CLI](https://vcc.docs.vrchat.com/vpm/cli/) ã‚’ä½¿ç”¨ã—ã¦ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹å ´åˆã€ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³ã‚’é–‹ãä»¥ä¸‹ã®ã‚³ãƒãƒ³ãƒ‰ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚
 
 ```
 vpm add repo https://tp-jp.github.io/vpm-repos/index.json
 ```
 
-VCC‚©‚ç”CˆÓ‚ÌƒvƒƒWƒFƒNƒg‚ğ‘I‘ğ‚µAuManage Projectv‚©‚çuManage Packagesv‚ğŠJ‚«‚Ü‚·B
-ˆê——‚Ì’†‚©‚ç `ColliderGenerator` ‚Ì‰E‚É‚ ‚éu{vƒ{ƒ^ƒ“‚ğƒNƒŠƒbƒN‚·‚é‚©uInstalled Vectionv‚©‚ç”CˆÓ‚Ìƒo[ƒWƒ‡ƒ“‚ğ‘I‘ğ‚·‚é‚±‚Æ‚ÅAƒvƒƒWƒFƒNƒg‚ÉƒCƒ“ƒ|[ƒg‚µ‚Ü‚·B 
+VCCã‹ã‚‰ä»»æ„ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’é¸æŠã—ã€ã€ŒManage Projectã€ã‹ã‚‰ã€ŒManage Packagesã€ã‚’é–‹ãã¾ã™ã€‚
+ä¸€è¦§ã®ä¸­ã‹ã‚‰ `ColliderGenerator` ã®å³ã«ã‚ã‚‹ã€Œï¼‹ã€ãƒœã‚¿ãƒ³ã‚’ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã‹ã€ŒInstalled Vectionã€ã‹ã‚‰ä»»æ„ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’é¸æŠã™ã‚‹ã“ã¨ã§ã€ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚ 
+![image](https://github.com/tp-jp/collider-generator/assets/130125691/2a843034-1732-4628-b679-c05a5c5208ad)
 
-ƒŠƒ|ƒWƒgƒŠ‚ğg‚í‚¸‚É“±“ü‚µ‚½‚¢ê‡‚Í [releases](https://github.com/tp-jp/collider-generator/releases) ‚©‚ç unitypackage ‚ğƒ_ƒEƒ“ƒ[ƒh‚µ‚ÄAƒvƒƒWƒFƒNƒg‚ÉƒCƒ“ƒ|[ƒg‚µ‚Ä‚­‚¾‚³‚¢B
+ãƒªãƒã‚¸ãƒˆãƒªã‚’ä½¿ã‚ãšã«å°å…¥ã—ãŸã„å ´åˆã¯ [releases](https://github.com/tp-jp/collider-generator/releases) ã‹ã‚‰ unitypackage ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã¦ã€ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã¦ãã ã•ã„ã€‚
 
-## g‚¢•û
+## ä½¿ã„æ–¹
 
-1. Packages/ColliderGenerator/Runtime/Prefabs/ColliderGenerator.prefab ‚ğ Hierarchy ‚Éƒhƒ‰ƒbƒO•ƒhƒƒbƒv‚µ‚Ü‚·B
+1. Packages/ColliderGenerator/Runtime/Prefabs/ColliderGenerator.prefab ã‚’ Hierarchy ã«ãƒ‰ãƒ©ãƒƒã‚°ï¼†ãƒ‰ãƒ­ãƒƒãƒ—ã—ã¾ã™ã€‚
 
-2. Hierarchyã‚Ì `ColliderGenerator` ‚ğ‘I‘ğ‚µAInspector ‚ğ•\¦‚µ‚Ü‚·B
+2. Hierarchyä¸Šã® `ColliderGenerator` ã‚’é¸æŠã—ã€Inspector ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚
 
-3. Inspectorã‚Åİ’è‚ğs‚¢‚Ü‚·B
+3. Inspectorä¸Šã§è¨­å®šã‚’è¡Œã„ã¾ã™ã€‚
    
    - Layout Size X
-     ƒRƒ‰ƒCƒ_[‚ğ”z’u‚·‚é”ÍˆÍiXƒTƒCƒYjB
+     ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ã‚’é…ç½®ã™ã‚‹ç¯„å›²ï¼ˆXã‚µã‚¤ã‚ºï¼‰ã€‚
    - Layout Size Z
-     ƒRƒ‰ƒCƒ_[‚ğ”z’u‚·‚é”ÍˆÍiZƒTƒCƒYjB
+     ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ã‚’é…ç½®ã™ã‚‹ç¯„å›²ï¼ˆZã‚µã‚¤ã‚ºï¼‰ã€‚
    - Layout Count
-     ƒRƒ‰ƒCƒ_[‚ğ”z’u‚·‚é”B
+     ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ã‚’é…ç½®ã™ã‚‹æ•°ã€‚
    - Collider Thickness
-     ƒRƒ‰ƒCƒ_[‚ÌŒú‚İB
+     ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ã®åšã¿ã€‚
    - Collider Height
-     ƒRƒ‰ƒCƒ_[‚Ì‚‚³B
+     ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ã®é«˜ã•ã€‚
    - Collider Edge Length
-     ƒRƒ‰ƒCƒ_[‚Ì•Ó‚Ì’·‚³B
-     0‚ğw’è‚·‚é‚Æ©“®‚ÅŒvZ‚µ‚Ü‚·B
+     ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ã®è¾ºã®é•·ã•ã€‚
+     0ã‚’æŒ‡å®šã™ã‚‹ã¨è‡ªå‹•ã§è¨ˆç®—ã—ã¾ã™ã€‚
    - Collider Name Format
-     ƒRƒ‰ƒCƒ_[‚Ì–¼‘O‚Ì‘®B
-     ¶¬‚É `{0}` ‚ª˜A”Ô‚É’uŠ·‚³‚ê‚Ü‚·B
+     ã‚³ãƒ©ã‚¤ãƒ€ãƒ¼ã®åå‰ã®æ›¸å¼ã€‚
+     ç”Ÿæˆæ™‚ã« `{0}` ãŒé€£ç•ªã«ç½®æ›ã•ã‚Œã¾ã™ã€‚
 
-4. Inspectorã‚Å `ColliderGenerator` ‚Ì `Generate` ƒ{ƒ^ƒ“‚ğ‰Ÿ‰º‚·‚é‚±‚Æ‚Å `BoxCollider` ‚ª¶¬‚³‚ê‚Ü‚·B
+4. Inspectorä¸Šã§ `ColliderGenerator` ã® `Generate` ãƒœã‚¿ãƒ³ã‚’æŠ¼ä¸‹ã™ã‚‹ã“ã¨ã§ `BoxCollider` ãŒç”Ÿæˆã•ã‚Œã¾ã™ã€‚
