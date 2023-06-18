@@ -29,7 +29,7 @@ namespace TpLab.ColliderGenerator
         {
             public Vector3 position;
             public Quaternion rotation;
-            public float edgeLength;
+            public Vector3 size;
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace TpLab.ColliderGenerator
                 var boxColliderInfo = CreateLayoutInfo(vertices[i], vertices[(i + 1) % layoutCount]);
                 Gizmos.matrix = Matrix4x4.TRS(boxColliderInfo.position, boxColliderInfo.rotation, Vector3.one);
                 Gizmos.color = new Color(0f, 1f, 0f, 0.3f);
-                Gizmos.DrawCube(Vector3.zero, new Vector3(colliderHeight, colliderThickness, boxColliderInfo.edgeLength));
+                Gizmos.DrawCube(Vector3.zero, boxColliderInfo.size);
             }
             Gizmos.matrix = cache;
         }
@@ -61,14 +61,14 @@ namespace TpLab.ColliderGenerator
                 var boxColliderInfo = CreateLayoutInfo(vertices[i], vertices[(i + 1) % layoutCount]);
 
                 // ボックスコライダーオブジェクトを作成
-                var boxColliderObject = new GameObject(string.Format(colliderNameFormat, i));
+                var boxColliderObject = new GameObject(string.Format(colliderNameFormat, i + 1));
                 boxColliderObject.transform.SetParent(transform);
                 boxColliderObject.transform.position = boxColliderInfo.position;
                 boxColliderObject.transform.rotation = boxColliderInfo.rotation;
 
                 // ボックスコライダーコンポーネントを追加
                 var boxCollider = boxColliderObject.AddComponent<BoxCollider>();
-                boxCollider.size = new Vector3(colliderHeight, colliderThickness, boxColliderInfo.edgeLength);
+                boxCollider.size = boxColliderInfo.size;
             }
         }
 
@@ -95,7 +95,7 @@ namespace TpLab.ColliderGenerator
             {
                 var angle = i * angleIncrement * Mathf.Deg2Rad;
                 var x = Mathf.Cos(angle) * (layoutSizeX + colliderThickness) * 0.5f;
-                var y = colliderHeight * 0.5f;
+                var y = 0f;
                 var z = Mathf.Sin(angle) * (layoutSizeZ + colliderThickness) * 0.5f;
                 vertices[i] = new Vector3(x, y, z);
             }
@@ -111,12 +111,14 @@ namespace TpLab.ColliderGenerator
         LayoutInfo CreateLayoutInfo(Vector3 pointA, Vector3 pointB)
         {
             var edgeVector = pointB - pointA;
-            var edgeDirection = edgeVector.normalized;
+            var position = transform.position + (pointA + pointB) * 0.5f;
+            var edgeDirection = (transform.position - position).normalized;
+            var edgeLength = colliderEdgeLength > 0 ? colliderEdgeLength : edgeVector.magnitude;
             return new LayoutInfo()
             {
-                position = transform.position + (pointA + pointB) * 0.5f,
+                position = position + Vector3.up * colliderHeight * 0.5f,
                 rotation = Quaternion.LookRotation(edgeDirection, Vector3.forward),
-                edgeLength = colliderEdgeLength > 0 ? colliderEdgeLength : edgeVector.magnitude,
+                size = new Vector3(colliderHeight, edgeLength, colliderThickness),
             };
         }
     }
